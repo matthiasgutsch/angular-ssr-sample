@@ -11,7 +11,7 @@ import { SampleComponent } from './sample/sample.component';
     SampleComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [],
