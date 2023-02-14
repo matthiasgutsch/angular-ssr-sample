@@ -1,45 +1,9 @@
-<section class="homepage-slider">
-    <p-carousel [value]="products" [autoplayInterval]="3000" [circular]="true">
-        <ng-template let-product pTemplate="item">
-
-
-            <img [src]="product.jetpack_featured_media_url" alt="" class="img-responsive">
-
-
-            <div class="caption">
-                <div class="text">
-                    <h4>Soluzione Software
-                    </h4>
-
-                    <h1 [innerHTML]="product.title.rendered"></h1>
-                    <p [innerHTML]="product.excerpt.rendered"></p>
-                    <a [routerLink]="['/' + lang + '/prodotto',product.slug]" class="btn btn-outline">
-                                  altre informazioni
-
-                                </a>
-                </div>
-            </div>
-
-
-
-
-        </ng-template>
-    </p-carousel>
-
-</section>
-
-
 <section class="homepage-featured-software">
     <div class="container">
 
         <div class="clearfix"></div>
         <div class="featured-boxed-software">
-
             <div class="row equal">
-
-
-
-
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <a href="https://ict-group.it/soluzioni/erp/gestionale-aziendale/">
                     </a>
