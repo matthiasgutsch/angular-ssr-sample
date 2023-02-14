@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: '', component: HomepageComponent, pathMatch: 'full'},
   { path: 'it', component: HomepageComponent },
   { path: 'en', component: HomepageComponent },
-  { path: ':lang/news/:slug', component: BlogDetailComponent },
+  { path: 'it/news/:slug', component: BlogDetailComponent },
 
 ];
 

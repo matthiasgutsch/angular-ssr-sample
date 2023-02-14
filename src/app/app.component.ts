@@ -15,7 +15,7 @@ import { PAGES, PAGES_EN } from './constants/constants';
 export class AppComponent {
   lang = 'it';
   language: string;
-  public langValue: any;
+  public langValue: 'it';
   pages: any;
   pageValue: string;
   constructor(private http: HttpClient,
