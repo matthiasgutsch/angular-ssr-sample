@@ -34,7 +34,15 @@
                             "src/assets/less/bootstrap.less",
                             "src/assets/less/style.less"
                         ],
-                        "scripts": []
+                        "scripts": [],
+                        "optimization": {
+                            "scripts": true,
+                            "styles": {
+                                "minify": true,
+                                "inlineCritical": false
+                            },
+                            "fonts": true
+                        }
                     },
                     "configurations": {
                         "production": {
@@ -63,6 +71,7 @@
                             "sourceMap": true,
                             "namedChunks": true
                         }
+
                     },
                     "defaultConfiguration": "production"
                 },
@@ -128,6 +137,7 @@
                             "sourceMap": true,
                             "extractLicenses": false
                         }
+
                     },
                     "defaultConfiguration": "production"
                 },
@@ -141,6 +151,14 @@
                         "production": {
                             "browserTarget": "angular-ssr:build:production",
                             "serverTarget": "angular-ssr:server:production"
+                        },
+                        "optimization": {
+                            "scripts": true,
+                            "styles": {
+                                "minify": true,
+                                "inlineCritical": false
+                            },
+                            "fonts": true
                         }
                     },
                     "defaultConfiguration": "development"
@@ -152,6 +170,7 @@
                             "/"
                         ]
                     },
+
                     "configurations": {
                         "production": {
                             "browserTarget": "angular-ssr:build:production",
