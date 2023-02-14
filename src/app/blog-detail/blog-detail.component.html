@@ -1,0 +1,63 @@
+<section class="feature-header press-header product-detail-slider" *ngFor="let element of elements" [ngStyle]="{ 'background-image': '-webkit-linear-gradient(180deg, rgba(61,86,114,0.2), rgba(61,86,114,0.9), rgba(61,86,114,1)), url(' + element.jetpack_featured_media_url + ')' }">
+    <div class="container">
+        <div class="col-sm-10 col-sm-offset-1">
+
+            <h3 class="text-center">News</h3>
+
+            <h1 class="text-center" [innerHTML]="element.title.rendered"></h1>
+
+
+        </div>
+    </div>
+</section>
+
+<section class="news-detail" *ngFor="let element of elements">
+
+    <div class="container">
+        <div class="col-sm-8">
+            <div class="col-sm-11 no-margin news-content">
+
+                <img [src]="element.jetpack_featured_media_url" class="img-responsive">
+
+
+                <div class="clearfix"></div>
+                <br><br>
+                <div class="clearfix"></div>
+
+
+                <p [innerHTML]="element.content.rendered"></p>
+
+
+                <div class="clearfix"></div>
+                <hr>
+                <div class="clearfix"></div>
+
+                <div class="addthis_inline_share_toolbox"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 sidebar-news">
+            <div class="col-md-12 col-sm-12 no-margin">
+
+
+                <h3><strong>Ultime News</strong></h3><br>
+
+
+            </div>
+            <div class="clearfix"></div>
+
+
+
+            <div class="col-sm-12 no-margin" *ngFor="let work of works | slice:0:4; let i = index;">
+                <div class="content">
+
+                    <a [routerLink]="['/' + lang + '/news',work.slug]" [title]="work.title.rendered">
+                        <h3 [innerHTML]="work.title.rendered"></h3>
+                    </a>
+                    <p [innerHTML]="work.excerpt.rendered | slice:0:100"></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</section>

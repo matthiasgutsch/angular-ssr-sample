@@ -8,12 +8,14 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SampleComponent } from './sample/sample.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SampleComponent,
-    HomepageComponent
+    HomepageComponent,
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
