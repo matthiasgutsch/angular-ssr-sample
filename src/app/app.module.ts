@@ -10,13 +10,19 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
 import {CarouselModule} from 'primeng/carousel';
+import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     SampleComponent,
     HomepageComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    AboutComponent,
+    BlogComponent,
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -28,7 +34,9 @@ import {CarouselModule} from 'primeng/carousel';
       },
     }),
     AppRoutingModule,
+    NgxPaginationModule,
     HttpClientModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
