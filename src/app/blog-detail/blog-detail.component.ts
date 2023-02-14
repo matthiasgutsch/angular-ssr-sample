@@ -34,32 +34,35 @@ export class BlogDetailComponent {
     private metaService: Meta,
     private router: Router,
     ) {
+}
 
 
-
-  this.route.paramMap.subscribe((params) => {
-    let id = this.route.snapshot.paramMap.get("slug");
-    this.elements = this.apiService.get_id(id, this.langValue).subscribe((res) => {
-      this.elements = res;
+ngOnInit(): void {
 
 
-      this.titleService.setTitle(this.elements[0].title.rendered + ' trtrtetr');
-      this.metaService.addTag({ name: 'description', content: this.elements[0].excerpt.rendered });
-      this.metaService.addTag({ name: 'robots', content: 'index,follow' });
-      this.metaService.addTag({ property: 'og:title', content: this.elements[0].id });
-      this.metaService.addTag({ name: 'robots', content: 'index,follow' });
-
-      this.loadNews(this.langValue);
-      if (this.elements === 'error') {
-        this.router.navigate(['/']);
-      }
+this.route.paramMap.subscribe((params) => {
+  let id = this.route.snapshot.paramMap.get("slug");
+  this.elements = this.apiService.get_id(id, this.langValue).subscribe((res) => {
+    this.elements = res;
 
 
-    });
+    this.titleService.setTitle(this.elements[0].title.rendered + ' trtrtetr');
+    this.metaService.addTag({ name: 'description', content: this.elements[0].excerpt.rendered });
+    this.metaService.addTag({ name: 'robots', content: 'index,follow' });
+    this.metaService.addTag({ property: 'og:title', content: this.elements[0].id });
+    this.metaService.addTag({ name: 'robots', content: 'index,follow' });
 
+    this.loadNews(this.langValue);
+    if (this.elements === 'error') {
+      this.router.navigate(['/']);
+    }
 
 
   });
+
+
+
+});
 }
 
 public loadNews(langValue: any){

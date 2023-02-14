@@ -25,7 +25,7 @@ export class HomepageComponent implements OnInit {
   count = 0;
   responsive: boolean;
   public langValue: any;
-  lang: string;
+  lang:string;
 
   constructor(
     private apiService: ApiService,
@@ -42,6 +42,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.lang = 'it';
 
     this.responsiveOptions = [
       {

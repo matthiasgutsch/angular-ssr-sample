@@ -1,3 +1,33 @@
+<section class="homepage-slider">
+    <p-carousel [value]="products" [autoplayInterval]="3000" [circular]="true">
+        <ng-template let-product pTemplate="item">
+
+
+            <img [src]="product.jetpack_featured_media_url" alt="" class="img-responsive">
+
+
+            <div class="caption">
+                <div class="text">
+                    <h4>Soluzione Software
+                    </h4>
+
+                    <h1 [innerHTML]="product.title.rendered"></h1>
+                    <p [innerHTML]="product.excerpt.rendered"></p>
+                    <a [routerLink]="['/it/' + '/prodotto',product.slug]" class="btn btn-outline">
+                                  altre informazioni
+
+                                </a>
+                </div>
+            </div>
+
+
+
+
+        </ng-template>
+    </p-carousel>
+
+</section>
+
 <section class="homepage-featured-software">
     <div class="container">
 
@@ -267,14 +297,14 @@
 
         <div class="col-md-3 col-sm-6 news clearfix" *ngFor=" let work of works | slice:0:4; let i = index;">
             <div class="content">
-                <a [routerLink]="['/' + lang + '/news',work.slug]"><img [src]="work.jetpack_featured_media_url" alt="" class="img-responsive"></a>
+                <a [routerLink]="['/it/' + '/news',work.slug]"><img [src]="work.jetpack_featured_media_url" alt="" class="img-responsive"></a>
 
                 <div class="text clearfix">
                     <h3 [innerHTML]="work.title.rendered">
-                        <a [routerLink]="['/' + lang + '/news',work.slug]"></a>
+                        <a [routerLink]="['/it/' + '/news',work.slug]"></a>
                     </h3>
                     <p [innerHTML]="work.excerpt.rendered | slice: 0:80"></p>
-                    <a [routerLink]="['/' + lang + '/news',work.slug]" class="btn btn-outline">        continua
+                    <a [routerLink]="['/it/' + '/news',work.slug]" class="btn btn-outline">        continua
 
           </a>
 

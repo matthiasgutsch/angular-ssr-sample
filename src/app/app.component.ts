@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ApiService } from './services/api.services';
 import { TranslateService } from '@ngx-translate/core';
@@ -18,11 +18,15 @@ export class AppComponent {
   public langValue: 'it';
   pages: any;
   pageValue: string;
+
+
   constructor(private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: any,
     private apiService: ApiService,
     private titleService:Title,
     private translate: TranslateService,
     private router: Router,
+
     private metaService: Meta) {
 
 
