@@ -32,6 +32,12 @@ export class HomepageComponent implements OnInit {
     private titleService: Title,
     private metaService: Meta,
     ) {
+
+      this.titleService.setTitle('Home');
+      this.metaService.addTag({ name: 'description', content: '' });
+      this.metaService.addTag({ name: 'robots', content: 'index,follow' });
+      this.metaService.addTag({ property: 'og:title', content: '' });
+      this.metaService.addTag({ name: 'robots', content: 'index,follow' });
   }
 
   ngOnInit(): void {
@@ -60,11 +66,7 @@ export class HomepageComponent implements OnInit {
       }
   ];
 
-  this.titleService.setTitle('Home');
-  this.metaService.addTag({ name: 'description', content: '' });
-  this.metaService.addTag({ name: 'robots', content: 'index,follow' });
-  this.metaService.addTag({ property: 'og:title', content: '' });
-  this.metaService.addTag({ name: 'robots', content: 'index,follow' });
+
 
     const paramsProducts = this.getRequestParams(
       this.lang = this.langValue,
