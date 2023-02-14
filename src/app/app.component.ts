@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { ApiService } from './services/api.services';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
