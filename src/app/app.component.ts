@@ -25,7 +25,6 @@ export class AppComponent {
     private router: Router,
     private metaService: Meta) {
 
-      localStorage.setItem('language', 'it');
 
       console.log(this.langValue)
       translate.addLangs(['it', 'en']);
@@ -40,16 +39,8 @@ export class AppComponent {
 
   useLanguage(language: string): void {
     console.log(language);
-    localStorage.setItem('language', language);
     this.router.navigateByUrl('/' + language );
-    this.langValue = localStorage.getItem("language");
     this.lang = this.langValue;
-
-    if (localStorage.getItem('language') == 'it'){
-      this.pages = PAGES;
-    } else {
-      this.pages = PAGES_EN;
-    }
   }
 
   ngOnInit() {

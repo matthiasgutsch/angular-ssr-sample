@@ -43,8 +43,6 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.langValue = localStorage.getItem("language");
-
     this.responsiveOptions = [
       {
           breakpoint: '1024px',

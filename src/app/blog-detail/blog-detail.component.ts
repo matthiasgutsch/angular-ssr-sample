@@ -36,8 +36,6 @@ export class BlogDetailComponent {
     ) {
 
 
-      this.langValue = localStorage.getItem("language");
-
 
   this.route.paramMap.subscribe((params) => {
     let id = this.route.snapshot.paramMap.get("slug");
