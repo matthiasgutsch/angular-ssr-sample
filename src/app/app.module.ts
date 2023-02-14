@@ -28,9 +28,7 @@ import {CarouselModule} from 'primeng/carousel';
       },
     }),
     AppRoutingModule,
-    OverlayPanelModule,
     HttpClientModule,
-    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
