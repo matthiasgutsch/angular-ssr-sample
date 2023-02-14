@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.services';
@@ -8,7 +8,7 @@ import { ApiService } from '../services/api.services';
   templateUrl: './blog-detail.component.html',
   styleUrls: ['./blog-detail.component.less']
 })
-export class BlogDetailComponent {
+export class BlogDetailComponent implements OnInit{
   elements: any = [];
   works:  Array<any>;
   products: any = [];
