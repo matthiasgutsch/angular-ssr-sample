@@ -21,7 +21,6 @@ export class AppComponent {
   pageValue: string;
   constructor(private http: HttpClient,
     private apiService: ApiService,
-    private spinner: NgxSpinnerService,
     private titleService:Title,
     private translate: TranslateService,
     private router: Router,

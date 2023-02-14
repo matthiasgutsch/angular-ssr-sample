@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -10,6 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {CarouselModule} from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -28,9 +28,9 @@ import {OverlayPanelModule} from 'primeng/overlaypanel';
       },
     }),
     AppRoutingModule,
-    NgxSpinnerModule,
     OverlayPanelModule,
     HttpClientModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

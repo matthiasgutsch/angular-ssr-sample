@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { ApiService } from '../services/api.services';
 
 @Component({
@@ -34,10 +33,8 @@ export class BlogDetailComponent {
     private titleService: Title,
     private metaService: Meta,
     private router: Router,
-    private spinner: NgxSpinnerService,
     ) {
 
-      this.spinner.show();
 
       this.langValue = localStorage.getItem("language");
 
@@ -63,9 +60,6 @@ export class BlogDetailComponent {
     });
 
 
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 500);
 
   });
 }
