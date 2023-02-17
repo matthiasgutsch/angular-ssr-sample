@@ -8,7 +8,6 @@
   </div>
 </section>
 
-
 <section class="news-list">
   <div class="container">
     <div class="row clearfix">
@@ -17,7 +16,6 @@
           <div class="news-box-wrapper clearfix item" *ngFor=" let news of newsList  | paginate: { itemsPerPage: pageSize, currentPage: page, totalItems: count }; let i = index">
             <div class="col-md-6 col-sm-12 no-margin">
               <a [routerLink]="['/' + lang + '/news',news.slug]"><img [src]="news.jetpack_featured_media_url" alt="" class="img-responsive"></a>
-
             </div>
             <div class="col-md-6 col-sm-12 news-box">
 
